@@ -24,9 +24,9 @@ st.write('---')
 a, b, c, d, e, f = st.tabs(['General', 'Projects', 'Experience', 'Softwares', 'Skills' , 'Workspaces'])
 
 with a:
-    display_underline('I am Harman, residential of Pakistan, living in the city Lahore. As a young skillfull person(atleast I think I have skills) I am hopefull to have a great impact in the field of Artificial Intelligence.', size=16)
+    st.write('I am Harman, residential of Pakistan, living in the city Lahore. As a young skillfull person(atleast I think I have skills) I am hopefull to have a great impact in the field of Artificial Intelligence.')
     st.write("---")
-    display_underline('Bio data: ')
+    st.markdown('Bio data: ')
     data = pd.DataFrame({'Data':['Name', 'Country living in', 'Age', 'Email', 'Contact number', 'Moto'], 'Answers':['Harman', 'Pakistan', '19', 'harmanwaheed@gmail.com', '+923329555307', 'Consistency']})
     data = pd.DataFrame({'Data':['Name', 'Country living in', 'Age', 'Email', 'Contact number', 'Moto'], 'Answers':['Harman', 'Pakistan', '19', 'harmanwaheed@gmail.com', '+923329555307', 'Consistency']})
     st.table(data)
