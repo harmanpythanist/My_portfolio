@@ -1,6 +1,17 @@
 import streamlit as st
 import pandas as pd
 
+
+page_bg_img = f"""
+    <style>
+    [data-testid="stAppViewContainer"] > .main {{
+    background-image: url("https://www.wallpaperflare.com/static/853/1009/106/simple-simple-background-minimalism-black-background-wallpaper.jpg");
+    }}
+    background: rgba(0,0,0,0);
+    </style>
+    """
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 def display_text_shape(text, text_color='white', background_color=None, size=14, border_radius=0):
     st.write(
         f'<span style="color: {text_color}; background-color: {background_color}; padding: 5px; font-size: {size}px; border-radius: {border_radius}px;">{text}</span>',
@@ -24,16 +35,16 @@ st.write('---')
 a, b, c, d, e, f = st.tabs(['General', 'Projects', 'Experience', 'Softwares', 'Skills' , 'Workspaces'])
 
 with a:
-    st.write('I am Harman, residential of Pakistan, living in the city Lahore. As a young skillfull person(atleast I think I have skills) I am hopefull to have a great impact in the field of Artificial Intelligence.')
+    display_underline('I am Harman, residential of Pakistan, living in the city Lahore. As a young skillfull person(atleast I think I have skills) I am hopefull to have a great impact in the field of Artificial Intelligence.')
     st.write("---")
-    st.markdown('Bio data: ')
+    display_underline('Bio data: ')
     data = pd.DataFrame({'Data':['Name', 'Country living in', 'Age', 'Email', 'Contact number', 'Moto'], 'Answers':['Harman', 'Pakistan', '19', 'harmanwaheed@gmail.com', '+923329555307', 'Consistency']})
     data = pd.DataFrame({'Data':['Name', 'Country living in', 'Age', 'Email', 'Contact number', 'Moto'], 'Answers':['Harman', 'Pakistan', '19', 'harmanwaheed@gmail.com', '+923329555307', 'Consistency']})
     st.table(data)
 
 with b:
-    display_underline('1 - Restaurants feedback sentiment analysis – NLP with python', size=18, bold=True, color='black')
-    display_underline('Using the machine learning and natural language techniques in python I have built a model that could predict whether the feedback is positive on negative. I have achieved accuaracy of 83.25% on that model, which is pretty impressive', size=16, color='black')
+    display_underline('1 - Restaurants feedback sentiment analysis – NLP with python', size=18, bold=True, color='yello')
+    display_underline('Using the machine learning and natural language techniques in python I have built a model that could predict whether the feedback is positive on negative. I have achieved accuaracy of 83.25% on that model, which is pretty impressive', size=16)
     display_underline('For this project I have used these modules in python: ', size=16, underline=True)
     display_underline('TfidfVectorizer, CountVectorizer, LogisticRegression, and machine learning techniques including accuracy, split method, Stop word etc.', bold=True)
     display_underline("See my sentiment analysis model on github: ", size=16)
