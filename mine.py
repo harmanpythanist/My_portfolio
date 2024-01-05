@@ -28,9 +28,9 @@ def display_underline(text, underline=False, color="white", size=14, bold=False)
     styled_text = f'<span style="{styles}">{text}</span>'
     st.markdown(styled_text, unsafe_allow_html=True)
 
-st.subheader("Harman Abdul Waheed")
+colored_subheader("Harman Abdul Waheed")
 display_underline('Data Scientist', size=15, bold=True)
-st.write('Pythonista, passionate about NLP, data science and training AI model.')
+display_underline('Pythonista, passionate about NLP, data science and training AI model.')
 st.write('---')
 a, b, c, d, e, f = st.tabs(['General', 'Projects', 'Experience', 'Softwares', 'Skills' , 'Workspaces'])
 
@@ -43,7 +43,7 @@ with a:
     st.table(data)
 
 with b:
-    display_underline('1 - Restaurants feedback sentiment analysis – NLP with python', size=18, bold=True, color='yello')
+    display_underline('1 - Restaurants feedback sentiment analysis – NLP with python', size=18, bold=True, color='yellow')
     display_underline('Using the machine learning and natural language techniques in python I have built a model that could predict whether the feedback is positive on negative. I have achieved accuaracy of 83.25% on that model, which is pretty impressive', size=16)
     display_underline('For this project I have used these modules in python: ', size=16, underline=True)
     display_underline('TfidfVectorizer, CountVectorizer, LogisticRegression, and machine learning techniques including accuracy, split method, Stop word etc.', bold=True)
