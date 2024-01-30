@@ -52,7 +52,7 @@ with b:
     image = Image.open('prediction.JPG')
     image1 = Image.open('prediction2.JPG')
     st.image(image)
-    st.image(image, caption ='Detection of swimming pools')
+    st.image(image1, caption ='Detection of swimming pools')
 
     st.write('---')
     
