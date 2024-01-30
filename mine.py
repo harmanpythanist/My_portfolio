@@ -49,8 +49,8 @@ with b:
     display_underline('For this project I have used these modules in python: ', size=16, underline=True)
     display_underline('pytorch, fastRCNN predictor, torchvision, and many other tools to apply train the model and plotting the predictions. We also have applied technique of non max suppression to avoind multiple bounding boxes in the same area of image.', bold=True)
     display_underline('Here is one of the prediction made by that model:', size=16)
-    image = Image.open('prediction.jpg')
-    image1 = Image.open('prediction2.jpg')
+    image = Image.open('prediction.JPG')
+    image1 = Image.open('prediction2.JPG')
     st.image(image)
     st.image(image, caption ='Detection of swimming pools')
 
