@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-
+from PIL import Image
 
 page_bg_img = f"""
     <style>
@@ -43,7 +43,20 @@ with a:
     st.table(data)
 
 with b:
-    display_underline('1 - Restaurants feedback sentiment analysis – NLP with python', size=18, bold=True, color='yellow')
+    display_underline('1 - Object detection from drone images', size=18, bold=True, color='yellow')
+    display_underline('This project is based on the image processing techniques using machine learning. I have worked with resnets (a large image processing model) to detect swimming pools from the drone images. With just data of 28 training images my model achieved an accuracy of 0.07.', size=16)
+    display_underline('My and my brother were working on this project from much time and finally achieved a model that could plot a bounding box around swimming pools in any test image.', size=16)
+    display_underline('For this project I have used these modules in python: ', size=16, underline=True)
+    display_underline('pytorch, fastRCNN predictor, torchvision, and many other tools to apply train the model and plotting the predictions. We also have applied technique of non max suppression to avoind multiple bounding boxes in the same area of image.', bold=True)
+    display_underline('Here is one of the prediction made by that model:', size=16)
+    image = Image.open('prediction.jpg')
+    image1 = Image.open('prediction2.jpg')
+    st.image(image)
+    st.image(image, caption ='Detection of swimming pools')
+
+    st.write('---')
+    
+    display_underline('2 - Restaurants feedback sentiment analysis – NLP with python', size=18, bold=True, color='yellow')
     display_underline('Using the machine learning and natural language techniques in python I have built a model that could predict whether the feedback is positive on negative. I have achieved accuaracy of 83.25% on that model, which is pretty impressive', size=16)
     display_underline('For this project I have used these modules in python: ', size=16, underline=True)
     display_underline('TfidfVectorizer, CountVectorizer, LogisticRegression, and machine learning techniques including accuracy, split method, Stop word etc.', bold=True)
@@ -51,21 +64,21 @@ with b:
     st.write('[feedbacks predictions model](https://github.com/harmanpythanist/Sentiment_analysis_movie_reviews)')
 
     st.write('---')
-    display_underline('2 - Cats and Dogs classification - Convolutional Neural network', size=18, bold=True, color='yellow')
+    display_underline('3 - Cats and Dogs classification - Convolutional Neural network', size=18, bold=True, color='yellow')
     display_underline('Using AI techniques to let the computer understand whether image is of cat or a dog is very interesting and complex as well. I have used convolutional neural network for this purpose which perform efficient on very large data(number of pixels in images)', size=16)
     display_underline('Used techniques: ', size=16, underline=True)
     display_underline('Tensorflow, keras, Sequential, Conv2d, optimizers, fully connected layers, and other techniques related to neural networks', bold=True)
     display_underline("See my website which can classify images based on this project: ", size=16)
     st.write('[Dogs-cats Classification app](https://https://neuralnetwok.streamlit.app/)')
     st.write('---')
-    display_underline('3 - Movies Recommendation system - ML with python', size=18, bold=True, color='yellow')
+    display_underline('4 - Movies Recommendation system - ML with python', size=18, bold=True, color='yellow')
     display_underline("I have used nlp and ai related stuff to make this model suggest you a movie based on any other movie. It will extract your movie's overview from the IMDB reviews and find a movie with similar overview for you. This project included high math calculations and techniques to reach a overview of same taste", size=16)
     display_underline('Used techniques: ', size=16, underline=True)
     display_underline('Machine learning algorithms and for converting text data into numerics, tfidf vectorizer and count vectorizer is used. For calculating the overviews similarity, Cosine similarity and linear kernel (from sklear) is used', bold=True)
     display_underline("See my movies recomemndation system sources on github: ", size=16)
     st.write('[feedbacks predictions model](https://github.com/harmanpythanist/Movies_recommendation_system)')
     st.write('---')
-    display_underline('4 - Selfmade Chatbot - NLP, ML', size=18, bold=True, color='yellow')
+    display_underline('5 - Selfmade Chatbot - NLP, ML', size=18, bold=True, color='yellow')
     display_underline('After making a model that could suggest you movie based on a movie you already liked (upper project), I thought to make it more robust by converting it into a chatbot.', size=16)
     display_underline('that chatbot will talk to you in a way a human would and suggest you a movie. The new thing is chatbot. It uses some artificial techniques and some rule based commands', size=16)
     display_underline('Used techniques: ', size=16, underline=True)
@@ -73,7 +86,7 @@ with b:
     display_underline('See the code online in my repository: ', size=16)
     st.write("[Movies suggestions chatbot](https://github.com/harmanpythanist/chatbot_movies_python)")
     st.write('---')
-    display_underline('5 - Website for my college students - Purely Python', size=18, bold=True, color='yellow')
+    display_underline('6 - Website for my college students - Purely Python', size=18, bold=True, color='yellow')
     display_underline("I have made a website for my college and that website is connected with a database to store the data. I have added options to sign up, login, add random note, gossip to the home page of website and also one option to add confession. Furthermore, there is teachers data visible in the website and in the position of principal its my picture(with a note that I am not principal)", size=16)
     display_underline('Used tools:', size=16, underline=True)
     display_underline('Streamlit, database, processing with dataframes, some css tools to make forms(to submit data) looks better, Some data science techniques to fetch data data from databse to add it on the website, Ballons celebrations and animations from lottie files to make website more appealing', bold=True)
